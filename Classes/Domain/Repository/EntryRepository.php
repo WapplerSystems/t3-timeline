@@ -1,5 +1,5 @@
 <?php
-namespace SIMONKOEHLER\CeTimeline\Domain\Repository;
+namespace WapplerSystems\CeTimeline\Domain\Repository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Resource\ResourceFactory;

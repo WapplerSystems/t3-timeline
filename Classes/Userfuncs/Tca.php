@@ -1,7 +1,6 @@
 <?php
-namespace SIMONKOEHLER\CeTimeline\Userfuncs;
+namespace WapplerSystems\CeTimeline\Userfuncs;
 
-use TYPO3\CMS\Backend\Form\Element\UserElement;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 
 class Tca{

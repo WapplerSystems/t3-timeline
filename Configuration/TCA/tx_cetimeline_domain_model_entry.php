@@ -5,7 +5,7 @@ return [
         'label' => 'header',
         'label_alt' => 'typeof,position',
         'label_alt_force' => 1,
-        'label_userFunc' => \SIMONKOEHLER\CeTimeline\Userfuncs\Tca::class . '->recordTitle',
+        'label_userFunc' => \WapplerSystems\CeTimeline\Userfuncs\Tca::class . '->recordTitle',
         'sortby' => 'sorting',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',

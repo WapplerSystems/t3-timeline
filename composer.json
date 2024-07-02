@@ -26,6 +26,11 @@
         "plugin",
         "css"
     ],
+    "autoload": {
+        "psr-4": {
+            "WapplerSystems\\CeTimeline\\": "Classes/"
+        }
+    },
     "replace": {
         "simonkoehler/ce-timeline": "self.version",
         "typo3-ter/ce-timeline": "self.version"
