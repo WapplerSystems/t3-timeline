@@ -1,0 +1,33 @@
+{
+    "name": "wapplersystems/ce-timeline",
+    "type": "typo3-cms-extension",
+    "version": "12.0.0",
+    "description": "Fork of simonkoehler/ce-timeline. Enables a new content element of type Timeline",
+    "homepage": "",
+    "authors": [
+        {
+            "name": "Simon Köhler",
+            "email": "info@simon-koehler.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "typo3@wappler.systems"
+    },
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "typo3/cms-core": "^12"
+    },
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "timeline",
+        "frontend",
+        "plugin",
+        "css"
+    ],
+    "replace": {
+        "simonkoehler/ce-timeline": "self.version",
+        "typo3-ter/ce-timeline": "self.version"
+    }
+}
