@@ -7,8 +7,8 @@ class Tca{
 
     public function recordTitle(&$parameters){
         $record = BackendUtility::getRecord($parameters['table'], $parameters['row']['uid']);
-        $newTitle = $record['title'];
-        switch ($record['typeof']) {
+        $newTitle = $record['title'] ?? '';
+        switch ($record['typeof'] ?? '') {
             case '0':
                 $newTitle .= 'Type '.$record['typeof'].': '.substr(strip_tags($record['header']), 0, 80).' '.$record['description'];
                 break;
