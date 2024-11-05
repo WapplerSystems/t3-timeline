@@ -1,3 +1,19 @@
+
+lib.contentElement {
+    templateRootPaths {
+        1277 = EXT:ce_timeline/Resources/Private/Templates/
+    }
+
+    partialRootPaths {
+        1277 = EXT:ce_timeline/Resources/Private/Partials/
+    }
+
+    layoutRootPaths {
+        1277 = EXT:ce_timeline/Resources/Private/Layouts/
+    }
+}
+
+
 tt_content {
     ce_timeline =< lib.contentElement
     ce_timeline {
@@ -28,14 +44,4 @@ tt_content {
     }
 }
 
-lib.contentElement{
-    templateRootPaths{
-        1277 = EXT:ce_timeline/Resources/Private/Templates/
-    }
-    partialRootPaths{
-        1277 = EXT:ce_timeline/Resources/Private/Partials/
-    }
-    layoutRootPaths{
-        1277 = EXT:ce_timeline/Resources/Private/Layouts/
-    }
-}
+
