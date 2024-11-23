@@ -1,4 +1,7 @@
 <?php
+
+use TYPO3\CMS\Core\Resource\File;
+
 return [
     'ctrl' => [
         'title' => 'Timeline Record',
@@ -14,10 +17,14 @@ return [
         'transOrigPointerField' => 'l10n_parent',
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
+        'hideTable' => true,
         'enablecolumns' => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
             'endtime' => 'endtime'
+        ],
+        'security' => [
+            'ignorePageTypeRestriction' => true,
         ],
         'iconfile' => 'EXT:ce_timeline/Resources/Public/Icons/content-timeline-record.svg',
     ],
@@ -325,27 +332,24 @@ return [
             ],
             'exclude' => true,
             'label' => 'LLL:EXT:ce_timeline/Resources/Private/Language/locallang_db.xlf:tx_cetimeline_domain_model_entry.media',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                'media',
-                [
-                    'appearance' => [
-                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:media.addFileReference'
-                    ],
-                    'foreign_types' => [
+            'config' => [
+                'type' => 'file',
+                'maxitems' => 50,
+                'overrideChildTca' => [
+                    'types' => [
                         '0' => [
                             'showitem' => '
                             --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
                             --palette--;;filePalette'
                         ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                        File::FILETYPE_IMAGE => [
                             'showitem' => '
                             --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
                             --palette--;;filePalette'
                         ]
                     ],
-                    'maxitems' => 50
-                ]
-            ),
+                ],
+            ],
         ],
     ],
 ];
